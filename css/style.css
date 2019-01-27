@@ -1,0 +1,190 @@
+@font-face {
+    font-family: Phenomena-Bold;
+    src: url(../fonts/Phenomena/Phenomena-Bold.otf);
+   }
+
+html {
+	font-size: 18px;
+}
+
+body {
+	background-color: #fef9d9;
+	color: #000000;
+	font-family: 'Philosopher', sans-serif;
+}
+
+.container-fluid {
+	padding: 0;
+	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2);
+
+}
+
+.top-nav {
+	/*width: 1166px;
+	background-color: white;
+	height: 80px;*/
+	/*margin: 0px 116px 0px 116px;*/
+	
+}
+
+.header {
+	width: 1166px;
+	background-color:  #fef9d9;
+	padding-top: 12px;
+	height: 80px;
+	margin: 0 auto;
+}
+
+.logo {
+	display: flex;
+	margin-right: 8px;
+}
+
+.top-nav_menu {
+	list-style: none;
+	padding: 0;
+	display: flex;
+}
+
+.top-nav_menu li {
+	margin-right: 40px;
+}
+
+.top-nav_menu li:last-child {
+	margin-right: 0px;
+}
+
+.top-nav_menu li a {
+	text-decoration: none;
+	letter-spacing: 1.35px;
+	color: #000000;
+	font-weight: 400;
+}
+
+.top-nav_menu li a:hover {
+	color: #8a1613;
+}
+
+.container{
+	width: 1166px;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.first-scrin {
+	margin-top: 15px;
+}
+
+.caffename {
+	width: 1166px;
+	position: absolute;
+	bottom: 360px;
+	z-index: 3;
+}
+
+h1{
+	font-family: Phenomena-Bold;
+	font-size: 120px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 191px 0 0 0;
+}
+
+h2 {
+	color: #935900;
+	font-family: Phenomena;
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 36px;
+	letter-spacing: 2.7px;
+}
+
+
+.front-foto {
+	display: block;
+	margin: 47px -10px;
+	box-shadow: 
+		-38px 37px 0 -25px  #fef9d9,
+		38px -38px 0 -25px  #fef9d9,
+		-11.5px -11px 0 0 #00541a,
+		35px 35px 0 -25px #00541a;
+}
+
+.color {
+	color: #ffffff;
+}
+
+button {
+	background-color: #8a1613;
+	letter-spacing: 1.35px;
+}
+
+button:hover {
+	background-color: #fef9d9;
+	color: #8a1613;
+	border: 2px solid #8a1613;
+}
+
+.first-btn {
+	height: 48px;
+	width: 250px;
+	margin-top: 30px;
+}
+
+.second-scrin {
+	margin-top: 100px;
+}
+
+
+.about-us {
+	width: 550px;
+	height: 370px;
+	background-color: #fef9d9;
+	padding: 39px;
+	box-shadow: 
+		-38px 37px 0 -25px  #fef9d9,
+		38px -38px 0 -25px  #fef9d9,
+		-11.5px -11px 0 0 #00541a,
+		35px 35px 0 -25px #00541a;
+	margin-left: 25px;	
+}
+
+.about {
+	margin: 0;
+	padding-bottom: 35px;
+	line-height: 24px;
+}
+
+.about:last-child {
+	padding-bottom: 0px;
+}
+
+.menu-scrin {
+	margin-top: 95px;
+	margin-bottom: 50px;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.menu-text {
+	margin: 0;
+	text-align: center;
+}
+
+.menu {
+	box-shadow: 
+		-38px 37px 0 -25px  #fef9d9,
+		38px -38px 0 -25px  #fef9d9,
+		-11.5px -11px 0 0 #00541a,
+		35px 35px 0 -25px #00541a;
+}
+
+.second-btn {
+	margin-top: 40px;
+	width: 230px;
+	height: 48px;
+}
+
+
