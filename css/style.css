@@ -13,6 +13,10 @@ body {
 	font-family: 'Philosopher', sans-serif;
 }
 
+.row {
+	margin: 0;
+}
+
 .container-fluid {
 	padding: 0;
 	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2);
@@ -63,6 +67,8 @@ body {
 
 .top-nav_menu li a:hover {
 	color: #8a1613;
+	letter-spacing: 1.35px;
+	cursor: pointer;
 }
 
 .container{
@@ -75,11 +81,14 @@ body {
 	margin-top: 15px;
 }
 
+/*.main-scrin{
+	height: 563px;
+}*/
+
 .caffename {
 	width: 1166px;
 	position: absolute;
 	bottom: 360px;
-	z-index: 3;
 }
 
 h1{
@@ -118,6 +127,7 @@ button {
 	background-color: #8a1613;
 	letter-spacing: 1.35px;
 	font-weight: 700;
+	border: 2px solid #8a1613;
 }
 
 button:hover {
@@ -126,6 +136,7 @@ button:hover {
 	font-weight: 700;
 	letter-spacing: 1.35px;
 	border: 2px solid #8a1613;
+	cursor: pointer;
 }
 
 .first-btn {
@@ -149,12 +160,12 @@ button:hover {
 		38px -38px 0 -25px  #fef9d9,
 		-11.5px -11px 0 0 #00541a,
 		35px 35px 0 -25px #00541a;
-	margin-left: 25px;	
+	/*margin-left: 25px;*/	
 }
 
 .about {
 	margin: 0;
-	padding-bottom: 35px;
+	padding-bottom: 33px;
 	line-height: 24px;
 }
 
@@ -164,16 +175,17 @@ button:hover {
 
 .menu-scrin {
 	margin-top: 95px;
-	margin-bottom: 50px;
+	
 }
 
 .bold {
 	font-weight: 700;
 }
 
-.menu-text {
+.text {
 	margin: 0;
 	text-align: center;
+	margin-bottom: 50px;
 }
 
 .menu {
@@ -190,4 +202,111 @@ button:hover {
 	height: 48px;
 }
 
+.center {
+	display: flex;
+	justify-content: center;
+}
+
+.buttons {
+	margin-bottom: 100px;
+}
+
+.galery {
+	width: 370px;
+	height: 522px;
+}
+
+.restaurant {
+	width: 370px;
+	height: 249px;
+}
+
+.col-12 {
+	padding: 0;
+	display: flex;
+}
+
+.photo {
+	position: relative;
+}
+
+.higher {
+	margin-bottom: 26px;
+}
+
+.arrow-unit {
+	width: 80px;
+	height: 40px;
+	position: absolute;
+	background-color: #8a1613;
+	z-index: 1;
+	top: 482px;
+	display: flex;
+    justify-content: center;
+}
+
+.right {
+	left: 305px;
+}
+
+.arrow {
+	align-self:center;
+}
+
+.galery-scrin {
+	margin-bottom: 100px;
+}
+
+.child-text {
+	width: 450px;
+	height: 317px;
+	padding: 20px;
+	box-shadow: 
+		-38px 37px 0 -25px  #fef9d9,
+		38px -38px 0 -25px  #fef9d9,
+		-11.5px -11px 0 0 #00541a,
+		35px 35px 0 -25px #00541a;
+}
+
+.col-12 {
+	display: flex;
+    justify-content: center;
+}
+
+.for-children {
+	margin-bottom: 100px;
+}
+
+form {
+	height: 250px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+input {
+	width: 470px;
+	height: 50px;
+	color: #575757;
+	line-height: 24px;
+	padding: 18px 18px 18px 55px;
+	border-radius: 3px;
+	border: 2px solid #8a1613;
+	background-color: #fef9d9;
+	background-image: url(../images/man-user.png);
+	background-position: 15px 10px;
+	background-repeat: no-repeat;
+}
+
+#telnumber, #persons {
+	margin-bottom: 30px;
+}
+
+#submit {
+	width: 230px;
+	height: 50px;
+	border-radius: 3px;
+	font-size: 14px;
+	font-weight: 700;
+}
 
