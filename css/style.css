@@ -17,30 +17,19 @@ body {
 	margin: 0;
 }
 
-.container-fluid {
+.zeroindent {
 	padding: 0;
-	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2);
-
 }
 
-.top-nav {
-	/*width: 1166px;
-	background-color: white;
-	height: 80px;*/
-	/*margin: 0px 116px 0px 116px;*/
-	
-}
-
-.header {
-	width: 1166px;
+.nav {
+	width: 100%;
 	background-color:  #fef9d9;
 	padding-top: 12px;
 	height: 80px;
-	margin: 0 auto;
+	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
-	display: flex;
 	margin-right: 8px;
 }
 
@@ -72,23 +61,38 @@ body {
 }
 
 .container{
-	width: 1166px;
 	padding: 0;
-	margin: 0 auto;
+}
+
+.scrin {
+	margin-bottom: 110px;
 }
 
 .first-scrin {
-	margin-top: 15px;
+	margin-top: 45px;
 }
 
-/*.main-scrin{
-	height: 563px;
-}*/
+.main-photo{
+	position: relative;
+	display: block;
+	margin: 47px -10px;
+	width: 750px;
+	height: 470px;
+	overflow: hidden;
+}
 
-.caffename {
-	width: 1166px;
+.corners {
+	box-shadow: 
+		-38px 37px 0 -25px  #fef9d9,
+		38px -38px 0 -25px  #fef9d9,
+		-11.5px -11px 0 0 #00541a,
+		35px 35px 0 -25px #00541a;
+}
+
+.main-photo .pizza {
 	position: absolute;
-	bottom: 360px;
+	bottom: 187px;
+	left: 20px;
 }
 
 h1{
@@ -96,28 +100,19 @@ h1{
 	font-size: 120px;
 	font-weight: 700;
 	text-transform: uppercase;
-	margin: 191px 0 0 0;
+	margin-top: 191px;
+	margin-bottom: 0;
 }
 
 h2 {
 	color: #935900;
-	font-family: Phenomena;
+	font-family: Phenomena-Bold;
 	font-size: 36px;
 	font-weight: 700;
 	line-height: 36px;
 	letter-spacing: 2.7px;
 }
 
-
-.front-foto {
-	display: block;
-	margin: 47px -10px;
-	box-shadow: 
-		-38px 37px 0 -25px  #fef9d9,
-		38px -38px 0 -25px  #fef9d9,
-		-11.5px -11px 0 0 #00541a,
-		35px 35px 0 -25px #00541a;
-}
 
 .color {
 	color: #ffffff;
@@ -128,6 +123,7 @@ button {
 	letter-spacing: 1.35px;
 	font-weight: 700;
 	border: 2px solid #8a1613;
+	color: #ffffff;
 }
 
 button:hover {
@@ -145,22 +141,12 @@ button:hover {
 	margin-top: 30px;
 }
 
-.second-scrin {
-	margin-top: 100px;
-}
-
 
 .about-us {
 	width: 550px;
 	height: 370px;
 	background-color: #fef9d9;
-	padding: 39px;
-	box-shadow: 
-		-38px 37px 0 -25px  #fef9d9,
-		38px -38px 0 -25px  #fef9d9,
-		-11.5px -11px 0 0 #00541a,
-		35px 35px 0 -25px #00541a;
-	/*margin-left: 25px;*/	
+	padding: 39px;	
 }
 
 .about {
@@ -173,10 +159,6 @@ button:hover {
 	padding-bottom: 0px;
 }
 
-.menu-scrin {
-	margin-top: 95px;
-	
-}
 
 .bold {
 	font-weight: 700;
@@ -188,38 +170,23 @@ button:hover {
 	margin-bottom: 50px;
 }
 
-.menu {
-	box-shadow: 
-		-38px 37px 0 -25px  #fef9d9,
-		38px -38px 0 -25px  #fef9d9,
-		-11.5px -11px 0 0 #00541a,
-		35px 35px 0 -25px #00541a;
-}
-
 .second-btn {
 	margin-top: 40px;
 	width: 230px;
 	height: 48px;
 }
 
+
 .center {
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 }
 
 .buttons {
 	margin-bottom: 100px;
 }
 
-.galery {
-	width: 370px;
-	height: 522px;
-}
-
-.restaurant {
-	width: 370px;
-	height: 249px;
-}
 
 .col-12 {
 	padding: 0;
@@ -246,26 +213,17 @@ button:hover {
 }
 
 .right {
-	left: 305px;
+	left: 290px;
 }
 
 .arrow {
-	align-self:center;
-}
-
-.galery-scrin {
-	margin-bottom: 100px;
+	align-self: center;
 }
 
 .child-text {
 	width: 450px;
 	height: 317px;
 	padding: 20px;
-	box-shadow: 
-		-38px 37px 0 -25px  #fef9d9,
-		38px -38px 0 -25px  #fef9d9,
-		-11.5px -11px 0 0 #00541a,
-		35px 35px 0 -25px #00541a;
 }
 
 .col-12 {
@@ -273,9 +231,6 @@ button:hover {
     justify-content: center;
 }
 
-.for-children {
-	margin-bottom: 100px;
-}
 
 form {
 	height: 250px;
@@ -298,15 +253,74 @@ input {
 	background-repeat: no-repeat;
 }
 
+#email {
+	background-image: url(../images/email.png);
+}
+
+#telnumber {
+	background-image: url(../images/call.png);
+}
+
+#date {
+	background-image: url(../images/calendar.png);
+}
+
+#time {
+	background-image: url(../images/clock.png);
+}
+
+#persons {
+	background-image: url(../images/multiple-users.png);
+}
+
+
+
 #telnumber, #persons {
 	margin-bottom: 30px;
 }
 
 #submit {
-	width: 230px;
+	width: 250px;
 	height: 50px;
 	border-radius: 3px;
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: 700;
 }
 
+h4 {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 36px;
+	letter-spacing: 1.8px;
+	margin-bottom: 20px;
+}
+
+#contacts {
+	margin-top: 0;
+}
+
+#instagram {
+	margin-right: 20px;
+}
+
+
+h3 {
+	font-family: Phenomena-Bold;
+	font-size: 120px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 9px;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.last-image {
+	position: relative;
+}
+
+.atop {
+	position: absolute;
+	bottom: 850px;
+	left: 530px;
+	margin: 0;
+}
