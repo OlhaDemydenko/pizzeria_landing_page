@@ -13,6 +13,7 @@ body {
 	font-family: 'Philosopher', sans-serif;
 }
 
+
 .row {
 	margin: 0;
 }
@@ -32,7 +33,7 @@ body {
 .logo {
 	margin-right: 8px;
 }
-
+ 
 .top-nav_menu {
 	list-style: none;
 	padding: 0;
@@ -183,10 +184,6 @@ button:hover {
 	align-items: center;
 }
 
-.buttons {
-	margin-bottom: 100px;
-}
-
 
 .col-12 {
 	padding: 0;
@@ -226,10 +223,10 @@ button:hover {
 	padding: 20px;
 }
 
-.col-12 {
+/*.col-12 {
 	display: flex;
     justify-content: center;
-}
+}*/
 
 
 form {
