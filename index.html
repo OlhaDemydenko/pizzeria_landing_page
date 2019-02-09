@@ -29,14 +29,14 @@
 			
 				<div class="row justify-content-start">
 		
-					<div class="col-md-auto">
+					<div class="col-auto">
 						<!-- <div class="logo"> -->
 							<img src="images/logo.png" alt="Perfecto Pizza" class="logo">
 						<!-- </div> -->
 					</div>
 					<!-- /.col-lg-auto -->
 				
-					<div class="col-md-auto">
+					<div class="col-10">
 						<ul class="top-nav_menu">
 							<li><a href="#">О нас</a></li>
 							<li><a href="#">Меню</a></li>
@@ -86,13 +86,13 @@
 	<div class="container">
 		<div class="row justify-content-between scrin">
 			
-			<div class="col-md-5 maker">
+			<div class="col-md-5">
 					<img src="images/pizzayolo.jpg" alt="pizzamaker" class="images">
 			</div>
 			<!-- /.col-lg-5 -->
 
 			<div class="col-md-6 align-self-center">
-				<div class="about-us corners" id="about-us">
+				<div class="about-us corners">
 
 					<div>
 						<p class="about">Perfecto Pizza - уютная итальянская пиццерия, в которой гармонично сочетаются традиции и тренды, классические блюда итальянской кухни и оригинальные рецепты от шеф-повара, домашняя атмосфера и стильный интерьер.</p>
@@ -166,9 +166,11 @@
 		<div class="row justify-content-between scrin">
 
 			<div class="col-md-4">
-					<img src="images/01.jpg" alt="restorant" class="photo images">
-					<div class="arrow-unit">
-						<span class="bold">&#x2190;</span>
+					<div class="arrow-position">
+						<img src="images/01.jpg" alt="restorant" class="photo images">
+						<div class="arrow-unit">
+							<span class="bold">&#x2190;</span>
+						</div>
 					</div>
 			</div>
 			<!-- /.col-lg-4 -->
@@ -180,9 +182,11 @@
 			<!-- /.col-lg-4 -->
 
 			<div class="col-md-4">
-				<img src="images/04.jpg" alt="restorant" class="photo images">
-				<div class="arrow-unit right-arrow">
-					<span class="bold">&#x2192;</span>
+				<div class="arrow-position">
+					<img src="images/04.jpg" alt="restorant" class="photo images">
+					<div class="arrow-unit right-arrow">
+						<span class="bold">&#x2192;</span>
+					</div>
 				</div>
 			</div>
 			<!-- /.col-lg-4 -->
@@ -202,7 +206,7 @@
 			</div>
 			<!-- /.col-12 -->
 			
-			<div class="col-lg-4 align-self-center zeroindent">
+			<div class="col-xl-5 col-md-12 align-self-center">
 				
 				<div class="child-text corners">
 
@@ -218,8 +222,8 @@
 			</div>
 			<!-- /.col-lg-5 -->
 
-			<div class="col-lg-7 zeroindent">
-					<img src="images/child.jpg" alt="pizza" class="">
+			<div class="col-xl-7 col-md-12 align-self-center">
+					<img src="images/child.jpg" alt="pizza" class="images">
 			</div>
 			<!-- /.col-lg-7 -->
 
@@ -238,34 +242,39 @@
 			</div>
 			<!-- /.col-12 -->
 			
-			<div class="col-lg-5 zeroindent">
-				
-				<form id="form1">
-
-					<input id="customer-name" type="text" required autocomplete="on" placeholder="Имя">
-					<input id="email" type="email" required autocomplete="on" placeholder="E-mail">
-					<input id="telnumber" type="tel" required autocomplete="on" placeholder="Контактный номер">
-
-				</form>
-
-				
-			</div>
-			<!-- /.col-lg-5 -->
-
-			<div class="col-lg-5 offset-lg-1 zeroindent">
-				
-				<form id="form2">
-
-					<input id="date" name="date" required placeholder="Дата">
-					<input id="time" type="time" step="1800" required placeholder="Время">
-					<input id="persons" type="number" min="1" required placeholder="Количество персон">
-
-				</form>
-
-			</div>
-			<!-- /.col-lg-5 -->
-
 			<div class="col-12">
+				<div class="row forms justify-content-center">
+				
+					<div class="col-md-5">
+						
+						<form id="form1">
+					
+							<input id="customer-name" type="text" required autocomplete="on" placeholder="Имя">
+							<input id="email" type="email" required autocomplete="on" placeholder="E-mail">
+							<input id="telnumber" type="tel" required autocomplete="on" placeholder="Контактный номер">
+					
+						</form>
+					
+						
+					</div>
+					
+					
+					<div class="col-md-5">
+						
+						<form id="form2">
+					
+							<input id="date" type="number" name="date" required placeholder="Дата">
+							<input id="time" type="number" name="time" step="1800" required placeholder="Время">
+							<input id="persons" type="number" min="1" required placeholder="Количество персон">
+					
+						</form>
+					
+					</div>
+					<!-- /.col-lg-5 -->
+				</div>
+			</div>
+
+			<div class="col-12 submit-btn">
 				<button type="submit" form="form1 form2" id="submit">Зарезервировать столик</button>
 			</div>	
 			<!-- /.col-12 -->
@@ -278,19 +287,16 @@
 
 	<div class="container">
 		
-		<div class="row justify-content-center scrin">
+		<div class="row justify-content-between scrin">
 
-			<div class="col-lg-3 zeroindent">
-				<h2 id="contacts">Контакты</h2>
+			<div class="col-12 col-lg-3">
+				<h2 id="contacts" class="contact-us">Контакты</h2>
 				<h4>Телефон</h4>
-				+38 063 123 45 67<br /> 
-				<br /> 
-				+38 050 123 45 67<br />
-				<br />  
-				+38 096 123 45 67
-				<br /> 
+				<p class="phones">+38 063 123 45 67</p>
+				<p class="phones">+38 050 123 45 67</p>
+				<p class="phones">+38 096 123 45 67</p>
 				<h4>Адрес</h4>
-				ул. Рогнединская 126
+				<p class="phones">ул. Рогнединская 126</p>
 
 				<p>
 					<a href="#" id="instagram">
@@ -304,8 +310,8 @@
 			</div>
 			<!-- /.col-lg-3 -->
 
-			<div class="col-lg-9">
-					<img src="images/map.jpg" alt="adress" class="map corners">
+			<div class="col-12 col-lg-9">
+					<img src="images/map.jpg" alt="adress" class="images corners">
 			</div>
 			<!-- /.col-lg-9 -->
 		</div>
@@ -321,8 +327,8 @@
 			</div>
 			
 			<div class="col-12">
-				<div class="last-image">
-					<img src="images/footer.jpg" alt="ждем вас в гости">
+				<div class="last-image-block">
+					<img src="images/footer.jpg" class="images" alt="ждем вас в гости">
 					<h3 class="atop"><span class="color">в гости</span></h3>
 				</div>
 			</div>
