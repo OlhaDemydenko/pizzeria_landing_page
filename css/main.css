@@ -488,7 +488,7 @@ h3 {
   }
 }
 
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 991px) {
   .col-12 {
     display: -webkit-box;
     display: -ms-flexbox;
