@@ -43,7 +43,7 @@ body
 				color: $burgundy
 				letter-spacing: 1.35px
 				cursor: pointer
-.scrin
+.screen
 	margin-bottom: 110px
 	@media only screen and (min-width: 992px) and (max-width: 1199px)
 		margin-bottom: 80px
@@ -59,13 +59,14 @@ body
 		position: absolute
 		margin: 0
 	.first-btn
-		position: absolute
 		height: 48px
 		@media only screen and (max-width: 1199px)
 			height: 40px
 		width: 250px
 		@media only screen and (max-width: 1199px)
 			width: 220px
+	.first-btn_pos
+		position: absolute
 		margin-top: 35%
 	.main-photo
 		width: 100%
@@ -74,12 +75,14 @@ body
 		justify-content: center
 		flex-direction: column
 		margin: 47px 10px
+		@media only screen and (max-width: 767px)
+			margin: 0 0 25px 0
+			justify-content: flex-start
+			align-items: center
 		&_pizza
 			display: block
 			width: 100%
 		.pizza
-			position: absolute
-			margin: 0
 			left: 3%
 			@media only screen and (min-width: 768px) and (max-width: 1199px)
 				left: 5%
@@ -89,7 +92,7 @@ h1
 		font-size: 119px
 	@media only screen and (min-width: 992px) and (max-width: 1199px)
 		font-size: 100px
-	@media only screen and (min-width: 768px) and (max-width: 991px)
+	@media only screen and (max-width: 991px)
 		font-size: 70px
 	font-weight: 700
 	text-transform: uppercase
@@ -199,6 +202,7 @@ form
 	justify-content: space-between
 	input
 		height: 50px
+		width: 100%
 		color: $input
 		line-height: 24px
 		padding: 18px 18px 18px 55px
@@ -266,7 +270,7 @@ h3
 		position: absolute
 		bottom: 84%
 		@media only screen and (max-width: 991px)
-			bottom: 80%
+			bottom: 75%
 		left: 50%
 		transform: translate(-50%, 0)
 		margin: 0
@@ -279,8 +283,8 @@ h3
 		margin-bottom: 20px
 		&:last-child
 			margin-bottom: 0
-		h3
+		h3, h1
 			margin-bottom: 0
-		
+
 
 

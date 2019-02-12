@@ -71,16 +71,16 @@ body {
   cursor: pointer;
 }
 
-.scrin {
+.screen {
   margin-bottom: 110px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .scrin {
+  .screen {
     margin-bottom: 80px;
   }
 }
 @media only screen and (max-width: 991px) {
-  .scrin {
+  .screen {
     margin-bottom: 50px;
   }
 }
@@ -105,10 +105,8 @@ body {
   margin: 0;
 }
 .first-scrin .first-btn {
-  position: absolute;
   height: 48px;
   width: 250px;
-  margin-top: 35%;
 }
 @media only screen and (max-width: 1199px) {
   .first-scrin .first-btn {
@@ -119,6 +117,10 @@ body {
   .first-scrin .first-btn {
     width: 220px;
   }
+}
+.first-scrin .first-btn_pos {
+  position: absolute;
+  margin-top: 35%;
 }
 .first-scrin .main-photo {
   width: 100%;
@@ -135,13 +137,22 @@ body {
           flex-direction: column;
   margin: 47px 10px;
 }
+@media only screen and (max-width: 767px) {
+  .first-scrin .main-photo {
+    margin: 0 0 25px 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .first-scrin .main-photo_pizza {
   display: block;
   width: 100%;
 }
 .first-scrin .main-photo .pizza {
-  position: absolute;
-  margin: 0;
   left: 3%;
 }
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
@@ -165,7 +176,7 @@ h1 {
     font-size: 100px;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (max-width: 991px) {
   h1 {
     font-size: 70px;
   }
@@ -370,6 +381,7 @@ form {
 }
 form input {
   height: 50px;
+  width: 100%;
   color: #575757;
   line-height: 24px;
   padding: 18px 18px 18px 55px;
@@ -484,7 +496,7 @@ h3 {
 }
 @media only screen and (max-width: 991px) {
   .last-image-block .atop {
-    bottom: 80%;
+    bottom: 75%;
   }
 }
 
@@ -508,7 +520,7 @@ h3 {
   .col-12:last-child {
     margin-bottom: 0;
   }
-  .col-12 h3 {
+  .col-12 h3, .col-12 h1 {
     margin-bottom: 0;
   }
 }
