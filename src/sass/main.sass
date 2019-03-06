@@ -2,7 +2,7 @@
 
 @font-face 
 	font-family: Phenomena-Bold
-	src: url(../fonts/Phenomena/Phenomena-Bold.otf)
+	src: url(../../fonts/Phenomena/Phenomena-Bold.otf)
 html
 	@media only screen and (min-width: 1200px)
 		font-size: 18px
@@ -55,19 +55,9 @@ body
 		display: flex
 		justify-content: center
 		flex-direction: column
-	.perfecto
-		position: absolute
-		margin: 0
-	.first-btn
-		height: 48px
-		@media only screen and (max-width: 1199px)
-			height: 40px
-		width: 250px
-		@media only screen and (max-width: 1199px)
-			width: 220px
-	.first-btn_pos
-		position: absolute
-		margin-top: 35%
+	.perfecto_position
+		@media only screen and (max-width: 991px)
+			margin-top: 7.5px //hight of corners
 	.main-photo
 		width: 100%
 		position: relative
@@ -78,14 +68,18 @@ body
 		@media only screen and (max-width: 767px)
 			margin: 0 0 25px 0
 			justify-content: flex-start
-			align-items: center
 		&_pizza
 			display: block
 			width: 100%
 		.pizza
+			position: absolute
+			margin: 0
 			left: 3%
 			@media only screen and (min-width: 768px) and (max-width: 1199px)
-				left: 5%
+				left: 8%
+			@media only screen and (max-width: 767px)
+				left: 50%
+				transform: translateX(-50%)
 h1
 	font-family: Phenomena-Bold
 	@media only screen and (min-width: 1200px)
@@ -94,8 +88,9 @@ h1
 		font-size: 100px
 	@media only screen and (max-width: 991px)
 		font-size: 70px
-	font-weight: 700
 	text-transform: uppercase
+	font-weight: 700
+	margin: 0
 h2
 	color: $titles
 	font-family: Phenomena-Bold
@@ -120,7 +115,18 @@ button
 		font-weight: 700
 		letter-spacing: 1.35px
 		cursor: pointer
+.first-btn
+		height: 48px
+		margin-top: 20px
+		width: 250px
+		@media only screen and (max-width: 1199px)
+			height: 40px
+			width: 220px			
+.novisible
+	visibility: hidden
 .images
+	width: 100%
+.higher
 	width: 100%
 .about-us
 	background-color: $bg
@@ -129,7 +135,7 @@ button
 .child-text
 	background-color: $bg
 	padding: 5%
-	@media only screen and (min-width: 768px) and (max-width: 1199px)
+	@media only screen and (max-width: 1199px)
 		padding: 3%
 		margin-bottom: 30px
 	display: inline-block
@@ -153,6 +159,8 @@ button
 	margin-top: 40px
 	width: 230px
 	height: 48px
+	@media only screen and (max-width: 767px)
+		margin-bottom: 30px
 .center
 	display: flex
 	flex-direction: column
@@ -210,20 +218,20 @@ form
 		border-radius: 3px
 		border: 2px solid $burgundy
 		background-color: $bg
-		background-image: url(../images/man-user.png)
+		background-image: url(../../images/man-user.png)
 		background-position: 15px 10px
 		background-repeat: no-repeat
 #email
-	background-image: url(../images/email.png)
+	background-image: url(../../images/email.png)
 #telnumber
-	background-image: url(../images/call.png)
+	background-image: url(../../images/call.png)
 	margin-bottom: 30px
 #date
-	background-image: url(../images/calendar.png)
+	background-image: url(../../images/calendar.png)
 #time
-	background-image: url(../images/clock.png)
+	background-image: url(../../images/clock.png)
 #persons
-	background-image: url(../images/multiple-users.png)
+	background-image: url(../../images/multiple-users.png)
 	margin-bottom: 30px
 #submit
 	width: 250px
@@ -250,29 +258,34 @@ h3
 	font-family: Phenomena-Bold
 	@media only screen and (min-width: 1200px)
 		font-size: 120px
+		margin-bottom: 25px
 	@media only screen and (min-width: 768px) and (max-width: 1199px)
 		font-size: 72px
+		margin-bottom: 17px
 	@media only screen and (max-width: 767px)
 		font-size: 60px
+		margin-bottom: 15px
 	font-weight: 700
 	text-transform: uppercase
 	letter-spacing: 9px
 	margin-top: 0
-	margin-bottom: 20px
 	text-align: center
 .last-image-block
 	position: relative
 	width: 100%
 	display: flex
-	justify-content: center
 	flex-direction: column
+	justify-content: center
+	align-items: center
 	.atop
 		position: absolute
-		bottom: 84%
-		@media only screen and (max-width: 991px)
+		bottom: 85%
+		@media only screen and (min-width: 768px) and (max-width: 991px)
+			bottom: 78%
+		@media only screen and (min-width: 576px) and (max-width: 767px)
 			bottom: 75%
-		left: 50%
-		transform: translate(-50%, 0)
+		@media only screen and (max-width: 575px)
+			bottom: 70%
 		margin: 0
 @media only screen and (max-width: 991px)
 	.col-12
@@ -280,11 +293,11 @@ h3
 		flex-direction: column
 		justify-content: center
 		align-items: center
-		margin-bottom: 20px
+		margin-bottom: 10px
 		&:last-child
 			margin-bottom: 0
 		h3, h1
 			margin-bottom: 0
-
-
-
+		.images
+			margin-top: 20px
+			margin-bottom: 20px
