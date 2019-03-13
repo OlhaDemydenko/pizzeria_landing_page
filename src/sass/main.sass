@@ -2,7 +2,7 @@
 
 @font-face 
 	font-family: Phenomena-Bold
-	src: url(../../fonts/Phenomena/Phenomena-Bold.otf)
+	src: url(../../fonts/Phenomena/Phenomena-Bold.otf), url(../../fonts/Phenomena/Phenomena-Bold.woff2), url(../../fonts/Phenomena/Phenomena-Bold.woff), url(../../fonts/Phenomena/Phenomena-Bold.ttf), url(../../fonts/Phenomena/Phenomena-Bold.eot)
 html
 	@media only screen and (min-width: 1200px)
 		font-size: 18px
@@ -261,10 +261,10 @@ h3
 		margin-bottom: 25px
 	@media only screen and (min-width: 768px) and (max-width: 1199px)
 		font-size: 72px
-		margin-bottom: 17px
+		margin-bottom: 15px
 	@media only screen and (max-width: 767px)
 		font-size: 60px
-		margin-bottom: 15px
+		margin-bottom: 10px
 	font-weight: 700
 	text-transform: uppercase
 	letter-spacing: 9px
@@ -280,10 +280,12 @@ h3
 	.atop
 		position: absolute
 		bottom: 85%
+		@media only screen and (min-width: 2000px)
+			bottom: 90%
 		@media only screen and (min-width: 768px) and (max-width: 991px)
-			bottom: 78%
+			bottom: 80%
 		@media only screen and (min-width: 576px) and (max-width: 767px)
-			bottom: 75%
+			bottom: 78%
 		@media only screen and (max-width: 575px)
 			bottom: 70%
 		margin: 0
@@ -301,3 +303,5 @@ h3
 		.images
 			margin-top: 20px
 			margin-bottom: 20px
+			&:last-child
+			margin-top: 0

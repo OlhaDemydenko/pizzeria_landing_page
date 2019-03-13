@@ -5,9 +5,13 @@ var novisibleBtn = document.getElementById("novisible");
 var firstScreen = document.getElementById("main-screen");
 var pizzaTitle = document.getElementById("pizzaTitle");
 var centerTitle = document.getElementById("centerTitle");
+var newAboutText = document.getElementById("newAboutText");
+var aboutTextCol = document.getElementById("aboutTextCol");
+var aboutUsText = document.getElementById("aboutUsText");
+var secondScreen = document.getElementById("secondScreen");
 
 
-function firstScreenPos () {
+function firstScreenPos() {
 	
 	pizzaTitle.removeChild(novisibleBtn); //remove novisible button from div with title 'pizza'
 
@@ -22,12 +26,17 @@ function firstScreenPos () {
 
 }
 
-var secondScreenPos = () => {
-	
+function secondScreenPos() {
+	let textClone = aboutUsText.cloneNode(true);
+	newAboutText.classList.add("col-12");
+	newAboutText.appendChild(textClone);
+
+	aboutTextCol.removeChild(aboutUsText);
 }
 
 if (screen.width < 768) {
 	firstScreenPos();
+	secondScreenPos();
 }
 
 

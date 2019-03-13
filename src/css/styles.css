@@ -1,6 +1,6 @@
 @font-face {
   font-family: Phenomena-Bold;
-  src: url(../../fonts/Phenomena/Phenomena-Bold.otf); }
+  src: url(../../fonts/Phenomena/Phenomena-Bold.otf), url(../../fonts/Phenomena/Phenomena-Bold.woff2), url(../../fonts/Phenomena/Phenomena-Bold.woff), url(../../fonts/Phenomena/Phenomena-Bold.ttf), url(../../fonts/Phenomena/Phenomena-Bold.eot); }
 
 @media only screen and (min-width: 1200px) {
   html {
@@ -16,7 +16,7 @@
 
 body {
   background-color: #fef9d9;
-  color: #000000;
+  color: #000;
   font-family: 'Philosopher', sans-serif;
   margin: 0 auto; }
 
@@ -46,7 +46,7 @@ body {
     .top-nav_menu li a {
       text-decoration: none;
       letter-spacing: 1.35px;
-      color: #000000;
+      color: #000;
       font-weight: 400; }
       .top-nav_menu li a:hover {
         color: #8a1613;
@@ -125,14 +125,14 @@ h2 {
   box-shadow: -38px 37px 0 -25px #fef9d9, 38px -38px 0 -25px #fef9d9, -11.5px -11px 0 0 #00541a, 35px 35px 0 -25px #00541a; }
 
 .color {
-  color: #ffffff; }
+  color: #fff; }
 
 button {
   background-color: #8a1613;
   letter-spacing: 1.35px;
   font-weight: 700;
   border: 2px solid #8a1613;
-  color: #ffffff; }
+  color: #fff; }
   button:hover {
     background-color: #fef9d9;
     color: #8a1613;
@@ -227,7 +227,7 @@ button {
     height: 8%;
     position: absolute;
     background-color: #8a1613;
-    color: #ffffff;
+    color: #fff;
     font-size: 1.7rem;
     z-index: 1;
     display: flex;
@@ -325,11 +325,11 @@ h3 {
   @media only screen and (min-width: 768px) and (max-width: 1199px) {
     h3 {
       font-size: 72px;
-      margin-bottom: 17px; } }
+      margin-bottom: 15px; } }
   @media only screen and (max-width: 767px) {
     h3 {
       font-size: 60px;
-      margin-bottom: 15px; } }
+      margin-bottom: 10px; } }
 
 .last-image-block {
   position: relative;
@@ -342,12 +342,15 @@ h3 {
     position: absolute;
     bottom: 85%;
     margin: 0; }
+    @media only screen and (min-width: 2000px) {
+      .last-image-block .atop {
+        bottom: 90%; } }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .last-image-block .atop {
-        bottom: 78%; } }
+        bottom: 80%; } }
     @media only screen and (min-width: 576px) and (max-width: 767px) {
       .last-image-block .atop {
-        bottom: 75%; } }
+        bottom: 78%; } }
     @media only screen and (max-width: 575px) {
       .last-image-block .atop {
         bottom: 70%; } }
@@ -365,4 +368,5 @@ h3 {
       margin-bottom: 0; }
     .col-12 .images {
       margin-top: 20px;
-      margin-bottom: 20px; } }
+      margin-bottom: 20px;
+      margin-top: 0; } }
