@@ -22,16 +22,20 @@
 	<div class="nav">
 		<div class="container">
 			
-				<div class="row justify-content-start">
+				<div class="row">
 		
-					<div class="col-auto">
-						<!-- <div class="logo"> -->
-							<img src="images/logo.png" alt="Perfecto Pizza" class="logo">
-						<!-- </div> -->
+					<div class="col-md-auto col-sm-12 burger-menu-row">
+						<img src="images/logo.png" alt="Perfecto Pizza" class="logo">
+						<ul class="top-nav_menu top-nav_active">
+							<li class="menu-point">Меню</li>
+							<li><a href="#" class="menu-btn">
+								<span class="menu-btn_line"></span></a>
+							</li>
+						</ul>	
 					</div>
 					<!-- /.col-lg-auto -->
 				
-					<div class="col-10">
+					<div class="col-md-10 menu-row-large">
 						<ul class="top-nav_menu">
 							<li><a href="#">О нас</a></li>
 							<li><a href="#">Меню</a></li>
@@ -41,6 +45,8 @@
 							<li><a href="#">Контакты</a></li>
 						</ul>
 					</div>
+
+
 					<!-- /.col-lg-auto -->
 				
 				</div>
@@ -233,9 +239,9 @@
 						
 						<form id="form2">
 					
-							<input id="date" type="number" name="date" required placeholder="Дата">
-							<input id="time" type="number" name="time" step="1800" required placeholder="Время">
-							<input id="persons" type="number" min="1" required placeholder="Количество персон">
+							<input id="date" type="text" name="date" required placeholder="Дата">
+							<input id="time" type="text" name="time" step="1800" required placeholder="Время">
+							<input id="persons" type="text" min="1" required placeholder="Количество персон">
 					
 						</form>
 					

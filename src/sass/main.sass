@@ -24,9 +24,18 @@ body
 	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2)
 .logo
 	margin-right: 8px
+.burger-menu-row
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+.menu-row-large
+	@media only screen and (max-width: 767px)
+		display: none	
 .top-nav_menu
 	list-style: none
 	display: flex
+	flex-direction: row
 	padding-left: 0
 	li
 		margin-right: 40px
@@ -43,6 +52,33 @@ body
 				color: $burgundy
 				letter-spacing: 1.35px
 				cursor: pointer
+	.menu-point
+		margin-right: 11px
+.top-nav_active
+	display: none
+	@media only screen and (max-width: 767px)
+		display: flex
+		flex-direction: row
+.menu-btn
+	display: block
+	height: 16px
+	width: 16px
+	position: relative
+	&_line, &_line::before, &_line::after
+		position: absolute
+		background-color: $burgundy
+		height: 3px
+		width: 20px
+		top: 50%
+		margin-top: -1.5px
+		left: 50%
+		margin-left: -10px
+	&_line::before
+		content: ''
+		transform: translateY(-8px)
+	&_line::after
+		content: ''
+		transform: translateY(8px)
 .screen
 	margin-bottom: 110px
 	@media only screen and (min-width: 992px) and (max-width: 1199px)
@@ -213,7 +249,7 @@ form
 		width: 100%
 		color: $input
 		line-height: 24px
-		padding: 18px 18px 18px 55px
+		padding: 0px 18px 0px 55px
 		margin-bottom: 30px
 		border-radius: 3px
 		border: 2px solid $burgundy

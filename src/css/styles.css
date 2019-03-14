@@ -32,9 +32,20 @@ body {
 .logo {
   margin-right: 8px; }
 
+.burger-menu-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+
+@media only screen and (max-width: 767px) {
+  .menu-row-large {
+    display: none; } }
+
 .top-nav_menu {
   list-style: none;
   display: flex;
+  flex-direction: row;
   padding-left: 0; }
   .top-nav_menu li {
     margin-right: 40px; }
@@ -52,6 +63,36 @@ body {
         color: #8a1613;
         letter-spacing: 1.35px;
         cursor: pointer; }
+  .top-nav_menu .menu-point {
+    margin-right: 11px; }
+
+.top-nav_active {
+  display: none; }
+  @media only screen and (max-width: 767px) {
+    .top-nav_active {
+      display: flex;
+      flex-direction: row; } }
+
+.menu-btn {
+  display: block;
+  height: 16px;
+  width: 16px;
+  position: relative; }
+  .menu-btn_line, .menu-btn_line::before, .menu-btn_line::after {
+    position: absolute;
+    background-color: #8a1613;
+    height: 3px;
+    width: 20px;
+    top: 50%;
+    margin-top: -1.5px;
+    left: 50%;
+    margin-left: -10px; }
+  .menu-btn_line::before {
+    content: '';
+    transform: translateY(-8px); }
+  .menu-btn_line::after {
+    content: '';
+    transform: translateY(8px); }
 
 .screen {
   margin-bottom: 110px; }
@@ -259,7 +300,7 @@ form {
     width: 100%;
     color: #575757;
     line-height: 24px;
-    padding: 18px 18px 18px 55px;
+    padding: 0px 18px 0px 55px;
     margin-bottom: 30px;
     border-radius: 3px;
     border: 2px solid #8a1613;
