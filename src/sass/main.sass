@@ -65,6 +65,7 @@ body
 	width: 16px
 	position: relative
 	&_line, &_line::before, &_line::after
+		display: block
 		position: absolute
 		background-color: $burgundy
 		height: 3px
@@ -76,30 +77,30 @@ body
 	&_line::before
 		content: ''
 		transform: translateY(-8px)
+		transition: 0.2s
 	&_line::after
 		content: ''
 		transform: translateY(8px)
+		transition: 0.2s
+.menu-btn_active .menu-btn_line
+	height: 0
+	&::before
+		transform: rotate(45deg)
+	&::after
+		transform: rotate(-45deg)
 .screen
 	margin-bottom: 110px
 	@media only screen and (min-width: 992px) and (max-width: 1199px)
 		margin-bottom: 80px
 	@media only screen and (max-width: 991px)
 		margin-bottom: 50px
+.rel
+	position: relative
 .first-scrin
 	margin-top: 45px
-	.perfecto-pizza
-		display: flex
-		justify-content: center
-		flex-direction: column
-	.perfecto_position
-		@media only screen and (max-width: 991px)
-			margin-top: 7.5px //hight of corners
 	.main-photo
 		width: 100%
 		position: relative
-		display: flex
-		justify-content: center
-		flex-direction: column
 		margin: 47px 10px
 		@media only screen and (max-width: 767px)
 			margin: 0 0 25px 0
@@ -111,9 +112,12 @@ body
 			position: absolute
 			margin: 0
 			left: 3%
+			top: 50%
+			transform: translateY(-50%)
 			@media only screen and (min-width: 768px) and (max-width: 1199px)
 				left: 8%
 			@media only screen and (max-width: 767px)
+				top: 3%
 				left: 50%
 				transform: translateX(-50%)
 h1
@@ -127,6 +131,18 @@ h1
 	text-transform: uppercase
 	font-weight: 700
 	margin: 0
+.perfecto-title
+	position: absolute
+	top: 4.2%
+	@media only screen and (min-width: 992px) and (max-width: 1199px)
+		top: 3.7%
+	@media only screen and (min-width: 768px) and (max-width: 991px)
+		top: 3.3%
+	@media only screen and (max-width: 767px)
+		position: relative
+		margin-top: 10px
+		margin-bottom: -25px
+		text-align: center
 h2
 	color: $titles
 	font-family: Phenomena-Bold
@@ -152,14 +168,17 @@ button
 		letter-spacing: 1.35px
 		cursor: pointer
 .first-btn
-		height: 48px
-		margin-top: 20px
-		width: 250px
-		@media only screen and (max-width: 1199px)
-			height: 40px
-			width: 220px			
-.novisible
-	visibility: hidden
+	height: 48px
+	width: 250px
+	margin-top: 20rem
+	@media only screen and (max-width: 1199px)
+		height: 40px
+		width: 220px
+		margin-top: 18rem
+	@media only screen and (min-width: 768px) and (max-width: 991px)
+		margin-top: 11rem
+	@media only screen and (max-width: 767px)
+		margin-top: 2rem
 .images
 	width: 100%
 .higher
@@ -168,13 +187,14 @@ button
 	background-color: $bg
 	padding: 8%
 	display: inline-block
+	margin-bottom: 30px
 .child-text
 	background-color: $bg
 	padding: 5%
+	display: inline-block
 	@media only screen and (max-width: 1199px)
 		padding: 3%
 		margin-bottom: 30px
-	display: inline-block
 .about
 	margin-top: 0
 	margin-bottom: 8%

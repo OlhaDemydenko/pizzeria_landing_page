@@ -79,6 +79,7 @@ body {
   width: 16px;
   position: relative; }
   .menu-btn_line, .menu-btn_line::before, .menu-btn_line::after {
+    display: block;
     position: absolute;
     background-color: #8a1613;
     height: 3px;
@@ -89,10 +90,19 @@ body {
     margin-left: -10px; }
   .menu-btn_line::before {
     content: '';
-    transform: translateY(-8px); }
+    transform: translateY(-8px);
+    transition: 0.2s; }
   .menu-btn_line::after {
     content: '';
-    transform: translateY(8px); }
+    transform: translateY(8px);
+    transition: 0.2s; }
+
+.menu-btn_active .menu-btn_line {
+  height: 0; }
+  .menu-btn_active .menu-btn_line::before {
+    transform: rotate(45deg); }
+  .menu-btn_active .menu-btn_line::after {
+    transform: rotate(-45deg); }
 
 .screen {
   margin-bottom: 110px; }
@@ -103,21 +113,14 @@ body {
     .screen {
       margin-bottom: 50px; } }
 
+.rel {
+  position: relative; }
+
 .first-scrin {
   margin-top: 45px; }
-  .first-scrin .perfecto-pizza {
-    display: flex;
-    justify-content: center;
-    flex-direction: column; }
-  @media only screen and (max-width: 991px) {
-    .first-scrin .perfecto_position {
-      margin-top: 7.5px; } }
   .first-scrin .main-photo {
     width: 100%;
     position: relative;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     margin: 47px 10px; }
     @media only screen and (max-width: 767px) {
       .first-scrin .main-photo {
@@ -129,12 +132,15 @@ body {
     .first-scrin .main-photo .pizza {
       position: absolute;
       margin: 0;
-      left: 3%; }
+      left: 3%;
+      top: 50%;
+      transform: translateY(-50%); }
       @media only screen and (min-width: 768px) and (max-width: 1199px) {
         .first-scrin .main-photo .pizza {
           left: 8%; } }
       @media only screen and (max-width: 767px) {
         .first-scrin .main-photo .pizza {
+          top: 3%;
           left: 50%;
           transform: translateX(-50%); } }
 
@@ -152,6 +158,22 @@ h1 {
   @media only screen and (max-width: 991px) {
     h1 {
       font-size: 70px; } }
+
+.perfecto-title {
+  position: absolute;
+  top: 4.2%; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .perfecto-title {
+      top: 3.7%; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .perfecto-title {
+      top: 3.3%; } }
+  @media only screen and (max-width: 767px) {
+    .perfecto-title {
+      position: relative;
+      margin-top: 10px;
+      margin-bottom: -25px;
+      text-align: center; } }
 
 h2 {
   color: #935900;
@@ -183,15 +205,19 @@ button {
 
 .first-btn {
   height: 48px;
-  margin-top: 20px;
-  width: 250px; }
+  width: 250px;
+  margin-top: 20rem; }
   @media only screen and (max-width: 1199px) {
     .first-btn {
       height: 40px;
-      width: 220px; } }
-
-.novisible {
-  visibility: hidden; }
+      width: 220px;
+      margin-top: 18rem; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .first-btn {
+      margin-top: 11rem; } }
+  @media only screen and (max-width: 767px) {
+    .first-btn {
+      margin-top: 2rem; } }
 
 .images {
   width: 100%; }
@@ -202,7 +228,8 @@ button {
 .about-us {
   background-color: #fef9d9;
   padding: 8%;
-  display: inline-block; }
+  display: inline-block;
+  margin-bottom: 30px; }
 
 .child-text {
   background-color: #fef9d9;
