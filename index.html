@@ -22,16 +22,25 @@
 	<div class="nav">
 		<div class="container">
 			
-				<div class="row">
+				<div class="row vertical-menu">
 		
-					<div class="col-md-auto col-sm-12 burger-menu-row">
+					<div class="col-md-auto col-sm-12 burger-menu-row ">
 						<img src="images/logo.png" alt="Perfecto Pizza" class="logo">
+						<ul class="top-nav_menu drop-down-menu">
+							<li><a href="#">О нас</a></li>
+							<li><a href="#">Меню</a></li>
+							<li><a href="#">Ресторан</a></li>
+							<li><a href="#">Бронирование</a></li>
+							<li><a href="#">Для детей</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
 						<ul class="top-nav_menu top-nav_active">
-							<li class="menu-point"><a href="#">Меню</a></li>
+							<li class="menu-point"><a href="#">Меню</a>
+							</li>
 							<li><a href="#" class="menu-btn">
 								<span class="menu-btn_line"></span></a>
 							</li>
-						</ul>	
+						</ul>
 					</div>
 					<!-- /.col-lg-auto -->
 				
@@ -58,7 +67,7 @@
 
 	<div class="container rel">
 
-		<h1 class="perfecto-title">perfecto </h1>
+		<h1 class="perfecto-title main-title">perfecto </h1>
 
 		<div class="row justify-content-center first-scrin screen" id="main-screen">
 			<div class="col-12 col-md-4 order-2 order-md-1">
@@ -69,10 +78,10 @@
 			<!-- /.col-lg-4 -->
 
 			<div class="col-12 col-md-8 order-1 order-md-2">
-				<div id="centerTitle" class="main-photo corners">
+				<div id="centerTitle" class="main-photo">
 					<img src="images/ital.jpg" alt="pizza" class="main-photo_pizza">
-					<div id="pizzaTitle" class="pizza">
-						<h1 class="color">pizza</h1>
+					<div id="pizzaTitle" class="pizza-title">
+						<h1 class="color  main-title">pizza</h1>
 					</div>
 				</div>
 			</div>
@@ -90,7 +99,7 @@
 			<!-- /.col-lg-5 -->
 
 			<div id="aboutTextCol" class="col-md-6 order-md-2 col-12 order-1 align-self-center">
-				<div id="aboutUsText" class="about-us corners">
+				<div id="aboutUsText" class="about-us">
 
 					<div>
 						<p class="about">Perfecto Pizza - уютная итальянская пиццерия, в которой гармонично сочетаются традиции и тренды, классические блюда итальянской кухни и оригинальные рецепты от шеф-повара, домашняя атмосфера и стильный интерьер.</p>
@@ -110,7 +119,7 @@
 		
 		<div class="row justify-content-center screen">
 			<div class="col-12">
-				<h2>Меню</h2>
+				<h2 class="headline">Меню</h2>
 			</div>
 
 			<div class="col-10">
@@ -120,13 +129,17 @@
 
 
 			<div class="col-md-6 col-12 center">
-				<img src="images/kokteyl.jpg" alt="bar" class="corners menu-images">
+				<div class="image-corners">
+					<img src="images/kokteyl.jpg" alt="bar" class="menu-images">
+				</div>
 				<button type="button" class="second-btn">Скачать меню бара</button>
 			</div>
 			<!-- /.col-lg-6 -->
 
 			<div class="col-md-6 col-12 center">
-				<img src="images/pizzamenu.jpg" alt="menu" class="corners menu-images">
+				<div class="image-corners">
+					<img src="images/pizzamenu.jpg" alt="menu" class="menu-images">
+				</div>
 				<button type="button" class="second-btn">Скачать меню кухни</button>
 			</div>
 			<!-- /.col-lg-6 -->
@@ -137,7 +150,7 @@
 		<div class="row justify-content-center">
 
 			<div class="col-12">
-				<h2>Ресторан</h2>
+				<h2 class="headline">Ресторан</h2>
 			</div>
 
 			<div class="col-10 align-items-center">
@@ -161,7 +174,7 @@
 			<!-- /.col-lg-4 -->
 
 			<div class="col-md-4 twin-photos">
-				<img class="higher" src="images/02.jpg" alt="interior">
+				<img class="images" src="images/02.jpg" alt="interior">
 				<img class="images" src="images/03.jpg" alt="interior">
 			</div>
 			<!-- /.col-lg-4 -->
@@ -181,13 +194,13 @@
 		<div class="row justify-content-between screen">
 
 			<div class="col-12">
-				<h2>Для детей</h2>
+				<h2 class="headline">Для детей</h2>
 			</div>
 			<!-- /.col-12 -->
 			
 			<div class="col-xl-5 col-md-12 align-self-center">
 				
-				<div class="child-text corners">
+				<div class="child-text">
 
 					<div>
 						<p class="about">Пока родители наслаждаются разнообразными напитками, изысканной кухней и уютной атмосферой любимого ресторана , у детей есть возможность весело провести время в компании своих сверстников. Именно так! </p>
@@ -212,7 +225,7 @@
 		<div class="row justify-content-center screen">
 
 			<div class="col-12">
-				<h2>Бронировать столик</h2>
+				<h2 class="headline">Бронировать столик</h2>
 			</div>
 			<!-- /.col-12 -->
 			
@@ -259,7 +272,7 @@
 		<div class="row justify-content-between screen">
 
 			<div class="col-12 col-lg-3">
-				<h2 id="contacts" class="contact-us">Контакты</h2>
+				<h2 id="contacts" class="contact-us headline">Контакты</h2>
 				<h4>Телефон</h4>
 				<p class="phones">+38 063 123 45 67</p>
 				<p class="phones">+38 050 123 45 67</p>
@@ -280,7 +293,9 @@
 			<!-- /.col-lg-3 -->
 
 			<div class="col-12 col-lg-9">
-					<img src="images/map.jpg" alt="adress" class="images corners">
+				<div class="image-corners">
+					<img src="images/map.jpg" alt="adress" class="images">
+				</div>
 			</div>
 			<!-- /.col-lg-9 -->
 		</div>

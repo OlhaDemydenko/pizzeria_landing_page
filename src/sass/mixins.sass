@@ -1,0 +1,18 @@
+@import "colors"
+
+@mixin corners
+	&
+		position: relative
+	&:before, &:after
+		content: ""
+		height: 60px
+		width: 60px
+		position: absolute
+		background-color: $green
+		z-index: -1
+	&:before
+		top: -10px
+		left: -10px
+	&:after
+		bottom: -10px
+		right: -10px
