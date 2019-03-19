@@ -13,28 +13,25 @@
 
 	<!-- Custom styles for this template -->
 	<link rel="stylesheet" type="text/css" href="build/css/main.css">
-	<!-- <link rel="stylesheet" type="text/css" href="build/normalize.css"> -->
-	
-	
 </head>
 <body>
 	
-	<div class="nav">
+	<div id="menu-block" class="nav">
 		<div class="container">
 			
-				<div class="row vertical-menu">
-		
-					<div class="col-md-auto col-sm-12 burger-menu-row ">
-						<img src="images/logo.png" alt="Perfecto Pizza" class="logo">
-						<ul class="top-nav_menu drop-down-menu">
-							<li><a href="#">О нас</a></li>
-							<li><a href="#">Меню</a></li>
-							<li><a href="#">Ресторан</a></li>
-							<li><a href="#">Бронирование</a></li>
-							<li><a href="#">Для детей</a></li>
-							<li><a href="#">Контакты</a></li>
-						</ul>
-						<ul class="top-nav_menu top-nav_active">
+				<div class="row">
+					<div class="col-md-auto col-6 menu-column">
+						<a href="index.html"><img src="images/logo.png" alt="Perfecto Pizza" class="logo"></a>
+					</div>
+				
+					<div class="col-md-10 col-6 menu-column">
+						<ul class="top-nav_menu">
+							<li class="menu-link"><a href="#secondScreen">О нас</a></li>
+							<li class="menu-link"><a href="#menu-screen">Меню</a></li>
+							<li class="menu-link"><a href="#restorant-screen">Ресторан</a></li>
+							<li class="menu-link"><a href="#forchildren-screen">Для детей</a></li>
+							<li class="menu-link"><a href="#reservation">Бронирование</a></li>
+							<li class="menu-link"><a href="#contacts">Контакты</a></li>
 							<li class="menu-point"><a href="#">Меню</a>
 							</li>
 							<li><a href="#" class="menu-btn">
@@ -42,40 +39,19 @@
 							</li>
 						</ul>
 					</div>
-					<!-- /.col-lg-auto -->
-				
-					<div class="col-md-10 menu-row-large">
-						<ul class="top-nav_menu">
-							<li><a href="#">О нас</a></li>
-							<li><a href="#">Меню</a></li>
-							<li><a href="#">Ресторан</a></li>
-							<li><a href="#">Бронирование</a></li>
-							<li><a href="#">Для детей</a></li>
-							<li><a href="#">Контакты</a></li>
-						</ul>
-					</div>
-
-
-					<!-- /.col-lg-auto -->
-				
 				</div>
-				<!-- /.row -->
 		</div>
-		<!-- /.container-fluid -->
 	</div>
 
 
-	<div class="container rel">
+	<div class="container rel-pos">
 
 		<h1 class="perfecto-title main-title">perfecto </h1>
 
 		<div class="row justify-content-center first-scrin screen" id="main-screen">
 			<div class="col-12 col-md-4 order-2 order-md-1">
-				<!-- <div id="generalTitle" class="perfecto_position"> -->
 					<button type="button" class="first-btn" id="firstBtn">Забронировать столик</button>
-				<!-- </div> -->
 			</div>
-			<!-- /.col-lg-4 -->
 
 			<div class="col-12 col-md-8 order-1 order-md-2">
 				<div id="centerTitle" class="main-photo">
@@ -85,39 +61,28 @@
 					</div>
 				</div>
 			</div>
-			<!-- /.col-lg-8 -->
-
 		</div>
-		<!-- /.row  first-screen-->
 
-
-		<div id="secondScreen" class="row justify-content-between screen">
+		<div id="aboutus-screen" class="row justify-content-between screen">
 			
 			<div class="col-md-5 order-md-1 col-12 order-2">
 					<img src="images/pizzayolo.jpg" alt="pizzamaker" class="images">
 			</div>
-			<!-- /.col-lg-5 -->
 
-			<div id="aboutTextCol" class="col-md-6 order-md-2 col-12 order-1 align-self-center">
-				<div id="aboutUsText" class="about-us">
-
+			<div class="col-md-6 order-md-2 col-12 order-1 align-self-center">
+				<div class="about-us">
 					<div>
 						<p class="about">Perfecto Pizza - уютная итальянская пиццерия, в которой гармонично сочетаются традиции и тренды, классические блюда итальянской кухни и оригинальные рецепты от шеф-повара, домашняя атмосфера и стильный интерьер.</p>
 						
 						<p class="about">Наш ресторан открылся в 1996 году и с тех пор мы продолжаем радовать наших гостей незабываемыми вкусами итальянских блюд.</p>
 						
 						<p class="about">Мы будем рады видеть вас по адресу: <span class="bold">г. Киев, ул. Рогнединская 128</span></p>
-
 					</div>
-
 				</div>
-				<!-- </div class="about-us"> -->
 			</div>
-			<!-- /.col-lg-6 -->
 		</div>
-		<!-- /.row -->
 		
-		<div class="row justify-content-center screen">
+		<div id="menu-screen" class="row justify-content-center screen">
 			<div class="col-12">
 				<h2 class="headline">Меню</h2>
 			</div>
@@ -125,16 +90,13 @@
 			<div class="col-10">
 				<p class="text">Каждое блюдо в нашем меню – это результат постоянной работы команды Perfecto Pizza.<br /> Разнообразие наших блюд придется по вкусу любому из наших посетителей своим уникальным вкусом.<br /> Мы с нетерпением ждем вас в гости, ведь это - лучшая оценка для нас!</p>
 			</div>
-			<!-- /.col-12 -->
-
-
+			
 			<div class="col-md-6 col-12 center">
 				<div class="image-corners">
 					<img src="images/kokteyl.jpg" alt="bar" class="menu-images">
 				</div>
-				<button type="button" class="second-btn">Скачать меню бара</button>
+				<button type="button" class="second-btn kitchen-btn">Скачать меню бара</button>
 			</div>
-			<!-- /.col-lg-6 -->
 
 			<div class="col-md-6 col-12 center">
 				<div class="image-corners">
@@ -142,12 +104,9 @@
 				</div>
 				<button type="button" class="second-btn">Скачать меню кухни</button>
 			</div>
-			<!-- /.col-lg-6 -->
-
 		</div>
-		<!-- /.row -->
 		
-		<div class="row justify-content-center">
+		<div id="restorant-screen" class="row justify-content-center">
 
 			<div class="col-12">
 				<h2 class="headline">Ресторан</h2>
@@ -157,131 +116,101 @@
 				<p class="text">Ресторан "Perfecto Pizza" - это сочетание уютного интерьера, качественного сервиса и вкусной еды. Приятная атмосфера ресторана была создана при помощи мягкого освещения, натуральных материалов и профессиональных дизайнеров.
 				</p>
 			</div>
-			<!-- /.col-12 -->
 		</div>
-		<!-- /.row -->
 		
 		<div class="row justify-content-between screen">
 
 			<div class="col-md-4">
 					<div class="arrow-position">
-						<img src="images/01.jpg" alt="restorant" class="photo images">
-						<div class="arrow-unit">
+						<img src="images/01.jpg" alt="restorant" class="rel-pos images">
+						<div class="arrow-unit left-arrow">
 							<span class="bold">&#x2190;</span>
 						</div>
 					</div>
 			</div>
-			<!-- /.col-lg-4 -->
 
 			<div class="col-md-4 twin-photos">
 				<img class="images" src="images/02.jpg" alt="interior">
 				<img class="images" src="images/03.jpg" alt="interior">
 			</div>
-			<!-- /.col-lg-4 -->
 
 			<div class="col-md-4">
 				<div class="arrow-position">
-					<img src="images/04.jpg" alt="restorant" class="photo images">
+					<img src="images/04.jpg" alt="restorant" class="rel-pos images">
 					<div class="arrow-unit right-arrow">
 						<span class="bold">&#x2192;</span>
 					</div>
 				</div>
 			</div>
-			<!-- /.col-lg-4 -->
 		</div>
-		<!-- /.row -->
 		
-		<div class="row justify-content-between screen">
-
+		<div id="forchildren-screen" class="row justify-content-between 
+		screen">
 			<div class="col-12">
 				<h2 class="headline">Для детей</h2>
 			</div>
-			<!-- /.col-12 -->
 			
 			<div class="col-xl-5 col-md-12 align-self-center">
 				
 				<div class="child-text">
-
 					<div>
 						<p class="about">Пока родители наслаждаются разнообразными напитками, изысканной кухней и уютной атмосферой любимого ресторана , у детей есть возможность весело провести время в компании своих сверстников. Именно так! </p>
 						
 						<p class="about">В “Perfecto Pizza” есть детская комната, где с малышами не только поиграют, но и научат деток готовить любимое блюдо - пиццу - со множеством разных начинок. Профессиональный пиццайоло обучает их всем тонкостям итальянского ремесла.</p>
 					</div>
-
 				</div>
-				<!-- </div class="child-text"> -->
-
 			</div>
-			<!-- /.col-lg-5 -->
-
+			
 			<div class="col-xl-7 col-md-12 align-self-center">
 					<img src="images/child.jpg" alt="pizza" class="images">
 			</div>
-			<!-- /.col-lg-7 -->
-
 		</div>
-		<!-- /.row -->
 		
-		<div class="row justify-content-center screen">
+		<div id="reservation" class="row justify-content-center screen">
 
 			<div class="col-12">
 				<h2 class="headline">Бронировать столик</h2>
 			</div>
-			<!-- /.col-12 -->
 			
 			<div class="col-12">
 				<div class="row forms justify-content-center">
 				
 					<div class="col-md-5">
-						
 						<form id="form1">
-					
-							<input id="customer-name" type="text" required autocomplete="on" placeholder="Имя">
-							<input id="email" type="email" required autocomplete="on" placeholder="E-mail">
-							<input id="telnumber" type="tel" required autocomplete="on" placeholder="Контактный номер">
-					
+							<input id="customer-name" class="reservation-input" type="text" required autocomplete="on" placeholder="Имя">
+							<input id="email" class="reservation-input email" type="email" required autocomplete="on" placeholder="E-mail">
+							<input id="telnumber" class="reservation-input telnumber" type="tel" required autocomplete="on" placeholder="Контактный номер">
 						</form>
-					
-						
 					</div>
-					
-					
+						
 					<div class="col-md-5">
-						
 						<form id="form2">
-					
-							<input id="date" type="text" name="date" required placeholder="Дата">
-							<input id="time" type="text" name="time" step="1800" required placeholder="Время">
-							<input id="persons" type="text" min="1" required placeholder="Количество персон">
-					
+							<input id="date" class="reservation-input date" type="text" name="date" required placeholder="Дата">
+							<input id="time" class="reservation-input time" type="text" name="time" step="1800" required placeholder="Время">
+							<input id="persons" class="reservation-input persons" type="text" min="1" required placeholder="Количество персон">
 						</form>
-					
 					</div>
-					<!-- /.col-lg-5 -->
 				</div>
 			</div>
 
 			<div class="col-12 submit-btn">
-				<button type="submit" form="form1 form2" id="submit">Зарезервировать столик</button>
+				<button id="submit" class="submission" type="submit" form="form1 form2">Зарезервировать столик</button>
 			</div>	
-			<!-- /.col-12 -->
-
 		</div>
-		<!-- /.row -->
 	
-		<div class="row justify-content-between screen">
+		<div id="contacts" class="row justify-content-between screen">
 
 			<div class="col-12 col-lg-3">
-				<h2 id="contacts" class="contact-us headline">Контакты</h2>
-				<h4>Телефон</h4>
+				<h2 class="contact-us headline">Контакты</h2>
+				<h4 class="contact-info">Телефон</h4>
 				<p class="phones">+38 063 123 45 67</p>
 				<p class="phones">+38 050 123 45 67</p>
 				<p class="phones">+38 096 123 45 67</p>
-				<h4>Адрес</h4>
+				<h4 class="contact-info">Адрес</h4>
 				<p class="phones">ул. Рогнединская 126</p>
 
 				<p>
-					<a href="#" id="instagram">
+					<a href="#" id="instagram" class="insta-icon">
 						<img src="images/instagram.png" alt="">
 					</a>
 					<a href="#" id="facebook">
@@ -290,38 +219,30 @@
 				</p>
 
 			</div>
-			<!-- /.col-lg-3 -->
 
 			<div class="col-12 col-lg-9">
 				<div class="image-corners">
 					<img src="images/map.jpg" alt="adress" class="images">
 				</div>
 			</div>
-			<!-- /.col-lg-9 -->
 		</div>
-		<!-- /.row -->
 
 	</div>
-	<!-- /.container -->
 
 	<div class="container-fluid">
 		<div class="row justify-content-center">
 			<div class="col-12">
-				<h3>Ждем вас</h3>				
+				<h3 class="ending-title">Ждем вас</h3>				
 			</div>
 			
 			<div class="col-12">
 				<div class="last-image-block">
 					<img src="images/footer.jpg" class="images" alt="ждем вас в гости">
-					<h3 class="atop"><span class="color">в гости</span></h3>
+					<h3 class="ending-title atop"><span class="color">в гости</span></h3>
 				</div>
 			</div>
 		</div>
 	</div>
-
-
-
-
 
 <script src="build/js/main.js"></script>
 

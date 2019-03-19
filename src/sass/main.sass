@@ -17,6 +17,7 @@ body
 	font-family: 'Philosopher', sans-serif
 	margin: 0 auto
 .nav
+	display: inline-block
 	width: 100%
 	background-color: $body-bg
 	padding-top: 12px
@@ -25,25 +26,12 @@ body
 	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2)
 .logo
 	display: block
-	margin-right: 8px
-.logo-center
-	margin-left: 50%
-	transform: translateX(-50%)
-	margin-top: 40px
-	z-index: 20
-.burger-menu-row
-	display: flex
-	flex-direction: row
-	justify-content: space-between
-	align-items: center
-.menu-row-large
-	@media only screen and (max-width: 767px)
-		display: none	
+	margin-right: 8px	
 .top-nav_menu
 	list-style: none
 	display: flex
 	flex-direction: row
-	padding-left: 0
+	padding-left: 0	
 	li
 		margin-right: 40px
 		@media only screen and (min-width: 768px) and (max-width: 991px)
@@ -59,19 +47,15 @@ body
 				color: $burgundy
 				letter-spacing: 1.35px
 				cursor: pointer
-	.menu-point
-		margin-right: 11px
-.drop-down-menu
-	flex-direction: column
-	display: none
-	transition: 0.5s
-	&_active
-		display: block
-.top-nav_active
-	display: none
+	.menu-point, .menu-btn
+		display: none
 	@media only screen and (max-width: 767px)
-		display: flex
-		flex-direction: row
+		justify-content: flex-end
+		.menu-link
+			display: none
+		.menu-point, .menu-btn
+			display: block
+			margin-right: 10px
 .menu-btn
 	display: block
 	height: 16px
@@ -101,13 +85,42 @@ body
 		transform: rotate(45deg)
 	&:after
 		transform: rotate(-45deg)
+.nav_drop-down
+	position: absolute
+	top: 0
+	background-color: $menu-bg
+	height: 100%
+	z-index: 3
+	transition: 0.3s
+	.logo
+		margin-top: 40px
+		margin-right: 0
+	.drop-down
+		position: relative
+		margin-top: 40px
+		font-size: 1.5rem
+		line-height: 2.5rem
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+		.menu-btn_active
+			position: absolute
+			z-index: 10
+		li
+			margin-right: 0
+			margin-bottom: 10px
+		.menu-point
+			display: none
+		.menu-link
+			display: inline-block
 .screen
 	margin-bottom: 110px
 	@media only screen and (min-width: 992px) and (max-width: 1199px)
 		margin-bottom: 80px
 	@media only screen and (max-width: 991px)
 		margin-bottom: 50px
-.rel
+.rel-pos
 	position: relative
 .first-scrin
 	margin-top: 45px
@@ -135,7 +148,7 @@ body
 .main-title
 	font-family: Phenomena-Bold
 	@media only screen and (min-width: 1200px)
-		font-size: 119px
+		font-size: 115px
 	@media only screen and (min-width: 992px) and (max-width: 1199px)
 		font-size: 100px
 	@media only screen and (max-width: 991px)
@@ -145,12 +158,13 @@ body
 	margin: 0
 .perfecto-title
 	position: absolute
-	top: 3.25%
+	top: 8.5rem
 	@media only screen and (min-width: 992px) and (max-width: 1199px)
-		top: 2.75%
+		top: 7.9rem
 	@media only screen and (min-width: 768px) and (max-width: 991px)
-		top: 2.25%
+		top: 7rem
 	@media only screen and (max-width: 767px)
+		top: 0
 		position: relative
 		margin-top: 10px
 		margin-bottom: -25px
@@ -223,9 +237,8 @@ button
 	@media only screen and (max-width: 767px)
 		margin-bottom: 30px
 .center
-	display: flex
-	flex-direction: column
-	align-items: center
+	display: inline-block
+	text-align: center
 .image-corners
 	width: 95%
 	@include corners
@@ -234,33 +247,28 @@ button
 	width: 100%
 .submit-btn
 	padding: 0
-	display: flex
-	justify-content: center
-.photo
-	position: relative
+	text-align: center
 .arrow-position
 	position: relative
-	display: flex
-	flex-direction: column
-	justify-content: flex-end
 	.arrow-unit
 		width: 22%
 		height: 8%
 		position: absolute
+		bottom: 0
 		background-color: $burgundy
 		color: $white
 		font-size: 1.7rem
 		z-index: 1
-		display: flex
-		flex-direction: column
-		justify-content: center
-		align-items: center
+		display: inline-block
+		text-align: center
 		&:hover
 			background-color: $body-bg
 			color: $burgundy
 			cursor: pointer
+	.left-arrow
+		left: 0
 	.right-arrow
-		align-self: flex-end
+		right: 0
 .twin-photos
 	display: flex
 	flex-direction: column
@@ -280,7 +288,7 @@ form
 	display: flex
 	flex-direction: column
 	justify-content: space-between
-	input
+	.reservation-input
 		height: 50px
 		width: 100%
 		color: $input-font
@@ -293,25 +301,25 @@ form
 		background-image: url(../../images/man-user.png)
 		background-position: 15px 10px
 		background-repeat: no-repeat
-#email
-	background-image: url(../../images/email.png)
-#telnumber
-	background-image: url(../../images/call.png)
-	margin-bottom: 30px
-#date
-	background-image: url(../../images/calendar.png)
-#time
-	background-image: url(../../images/clock.png)
-#persons
-	background-image: url(../../images/multiple-users.png)
-	margin-bottom: 30px
-#submit
+	.email
+		background-image: url(../../images/email.png)
+	.telnumber
+		background-image: url(../../images/call.png)
+		margin-bottom: 30px
+	.date
+		background-image: url(../../images/calendar.png)
+	.time
+		background-image: url(../../images/clock.png)
+	.persons
+		background-image: url(../../images/multiple-users.png)
+		margin-bottom: 30px
+.submission
 	width: 250px
 	height: 50px
 	border-radius: 3px
 	font-size: 18px
 	font-weight: 700
-h4
+.contact-info
 	font-size: 24px
 	font-weight: 700
 	line-height: 36px
@@ -324,9 +332,9 @@ h4
 	margin: 0
 	font-size: 24px
 	letter-spacing: 1.5px
-#instagram
+.insta-icon
 	margin-right: 20px
-h3
+.ending-title
 	font-family: Phenomena-Bold
 	@media only screen and (min-width: 1200px)
 		font-size: 120px
@@ -370,10 +378,9 @@ h3
 		margin-bottom: 10px
 		&:last-child
 			margin-bottom: 0
-		h3, .main-title
+		.ending-title, .main-title
 			margin-bottom: 0
 		.images
 			margin-top: 20px
-			margin-bottom: 20px
 			&:last-child
 			margin-top: 0

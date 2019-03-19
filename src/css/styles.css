@@ -21,6 +21,7 @@ body {
   margin: 0 auto; }
 
 .nav {
+  display: inline-block;
   width: 100%;
   background-color: #fef9d9;
   padding-top: 12px;
@@ -32,22 +33,6 @@ body {
 .logo {
   display: block;
   margin-right: 8px; }
-
-.logo-center {
-  margin-left: 50%;
-  transform: translateX(-50%);
-  margin-top: 40px;
-  z-index: 20; }
-
-.burger-menu-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center; }
-
-@media only screen and (max-width: 767px) {
-  .menu-row-large {
-    display: none; } }
 
 .top-nav_menu {
   list-style: none;
@@ -70,22 +55,16 @@ body {
         color: #8a1613;
         letter-spacing: 1.35px;
         cursor: pointer; }
-  .top-nav_menu .menu-point {
-    margin-right: 11px; }
-
-.drop-down-menu {
-  flex-direction: column;
-  display: none;
-  transition: 0.5s; }
-  .drop-down-menu_active {
-    display: block; }
-
-.top-nav_active {
-  display: none; }
+  .top-nav_menu .menu-point, .top-nav_menu .menu-btn {
+    display: none; }
   @media only screen and (max-width: 767px) {
-    .top-nav_active {
-      display: flex;
-      flex-direction: row; } }
+    .top-nav_menu {
+      justify-content: flex-end; }
+      .top-nav_menu .menu-link {
+        display: none; }
+      .top-nav_menu .menu-point, .top-nav_menu .menu-btn {
+        display: block;
+        margin-right: 10px; } }
 
 .menu-btn {
   display: block;
@@ -118,6 +97,36 @@ body {
   .menu-btn_active .menu-btn_line:after {
     transform: rotate(-45deg); }
 
+.nav_drop-down {
+  position: absolute;
+  top: 0;
+  background-color: #e9d9ae;
+  height: 100%;
+  z-index: 3;
+  transition: 0.3s; }
+  .nav_drop-down .logo {
+    margin-top: 40px;
+    margin-right: 0; }
+  .nav_drop-down .drop-down {
+    position: relative;
+    margin-top: 40px;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+    .nav_drop-down .drop-down .menu-btn_active {
+      position: absolute;
+      z-index: 10; }
+    .nav_drop-down .drop-down li {
+      margin-right: 0;
+      margin-bottom: 10px; }
+    .nav_drop-down .drop-down .menu-point {
+      display: none; }
+    .nav_drop-down .drop-down .menu-link {
+      display: inline-block; }
+
 .screen {
   margin-bottom: 110px; }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -127,7 +136,7 @@ body {
     .screen {
       margin-bottom: 50px; } }
 
-.rel {
+.rel-pos {
   position: relative; }
 
 .first-scrin {
@@ -178,7 +187,7 @@ body {
   margin: 0; }
   @media only screen and (min-width: 1200px) {
     .main-title {
-      font-size: 119px; } }
+      font-size: 115px; } }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .main-title {
       font-size: 100px; } }
@@ -188,15 +197,16 @@ body {
 
 .perfecto-title {
   position: absolute;
-  top: 3.25%; }
+  top: 8.5rem; }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .perfecto-title {
-      top: 2.75%; } }
+      top: 7.9rem; } }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .perfecto-title {
-      top: 2.25%; } }
+      top: 7rem; } }
   @media only screen and (max-width: 767px) {
     .perfecto-title {
+      top: 0;
       position: relative;
       margin-top: 10px;
       margin-bottom: -25px;
@@ -300,9 +310,8 @@ button {
       margin-bottom: 30px; } }
 
 .center {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
+  display: inline-block;
+  text-align: center; }
 
 .image-corners {
   width: 95%; }
@@ -328,35 +337,29 @@ button {
 
 .submit-btn {
   padding: 0;
-  display: flex;
-  justify-content: center; }
-
-.photo {
-  position: relative; }
+  text-align: center; }
 
 .arrow-position {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; }
+  position: relative; }
   .arrow-position .arrow-unit {
     width: 22%;
     height: 8%;
     position: absolute;
+    bottom: 0;
     background-color: #8a1613;
     color: #fff;
     font-size: 1.7rem;
     z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
+    display: inline-block;
+    text-align: center; }
     .arrow-position .arrow-unit:hover {
       background-color: #fef9d9;
       color: #8a1613;
       cursor: pointer; }
+  .arrow-position .left-arrow {
+    left: 0; }
   .arrow-position .right-arrow {
-    align-self: flex-end; }
+    right: 0; }
 
 .twin-photos {
   display: flex;
@@ -395,7 +398,7 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-  form input {
+  form .reservation-input {
     height: 50px;
     width: 100%;
     color: #575757;
@@ -408,32 +411,27 @@ form {
     background-image: url(../../images/man-user.png);
     background-position: 15px 10px;
     background-repeat: no-repeat; }
+  form .email {
+    background-image: url(../../images/email.png); }
+  form .telnumber {
+    background-image: url(../../images/call.png);
+    margin-bottom: 30px; }
+  form .date {
+    background-image: url(../../images/calendar.png); }
+  form .time {
+    background-image: url(../../images/clock.png); }
+  form .persons {
+    background-image: url(../../images/multiple-users.png);
+    margin-bottom: 30px; }
 
-#email {
-  background-image: url(../../images/email.png); }
-
-#telnumber {
-  background-image: url(../../images/call.png);
-  margin-bottom: 30px; }
-
-#date {
-  background-image: url(../../images/calendar.png); }
-
-#time {
-  background-image: url(../../images/clock.png); }
-
-#persons {
-  background-image: url(../../images/multiple-users.png);
-  margin-bottom: 30px; }
-
-#submit {
+.submission {
   width: 250px;
   height: 50px;
   border-radius: 3px;
   font-size: 18px;
   font-weight: 700; }
 
-h4 {
+.contact-info {
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
@@ -449,10 +447,10 @@ h4 {
   font-size: 24px;
   letter-spacing: 1.5px; }
 
-#instagram {
+.insta-icon {
   margin-right: 20px; }
 
-h3 {
+.ending-title {
   font-family: Phenomena-Bold;
   font-weight: 700;
   text-transform: uppercase;
@@ -460,15 +458,15 @@ h3 {
   margin-top: 0;
   text-align: center; }
   @media only screen and (min-width: 1200px) {
-    h3 {
+    .ending-title {
       font-size: 120px;
       margin-bottom: 25px; } }
   @media only screen and (min-width: 768px) and (max-width: 1199px) {
-    h3 {
+    .ending-title {
       font-size: 72px;
       margin-bottom: 15px; } }
   @media only screen and (max-width: 767px) {
-    h3 {
+    .ending-title {
       font-size: 60px;
       margin-bottom: 10px; } }
 
@@ -505,9 +503,8 @@ h3 {
     margin-bottom: 10px; }
     .col-12:last-child {
       margin-bottom: 0; }
-    .col-12 h3, .col-12 .main-title {
+    .col-12 .ending-title, .col-12 .main-title {
       margin-bottom: 0; }
     .col-12 .images {
       margin-top: 20px;
-      margin-bottom: 20px;
       margin-top: 0; } }
