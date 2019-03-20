@@ -9,8 +9,8 @@ menuBtn.addEventListener('click', function(e){
 	menuBtn.classList.toggle('menu-btn_active');
 	menuList.classList.toggle('drop-down');
 	nav.classList.toggle('nav_drop-down');
-	logoCol.classList.toggle('col-12');
-	menuCol.classList.toggle('col-12');
+	// logoCol.classList.toggle('col-12');
+	// menuCol.classList.toggle('col-12');
 })
 
 

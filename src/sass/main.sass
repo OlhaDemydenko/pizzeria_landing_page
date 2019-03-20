@@ -22,6 +22,9 @@ body
 	background-color: $body-bg
 	padding-top: 12px
 	height: 80px
+	@media only screen and (max-width: 767px)
+		.row-adaptive
+			justify-content: space-between
 .nav-active
 	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2)
 .logo
@@ -30,7 +33,6 @@ body
 .top-nav_menu
 	list-style: none
 	display: flex
-	flex-direction: row
 	padding-left: 0	
 	li
 		margin-right: 40px
@@ -43,6 +45,7 @@ body
 			letter-spacing: 1.35px
 			color: $main-font
 			font-weight: 400
+			webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 			&:hover
 				color: $burgundy
 				letter-spacing: 1.35px
@@ -92,9 +95,21 @@ body
 	height: 100%
 	z-index: 3
 	transition: 0.3s
-	.logo
-		margin-top: 40px
-		margin-right: 0
+	.row-adaptive
+		position: relative
+	.menu-column
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+	.logo-adaptive
+		display: flex
+		flex-direction: row
+		justify-content: center
+		.logo
+			margin-top: 40px
+			margin-right: 0
+	.menu-adaptive
+		top: 100px
 	.drop-down
 		position: relative
 		margin-top: 40px
@@ -107,6 +122,10 @@ body
 		.menu-btn_active
 			position: absolute
 			z-index: 10
+			top: -125px
+			right: -50%
+			transform: translateX(50%)
+			webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 		li
 			margin-right: 0
 			margin-bottom: 10px
@@ -162,7 +181,7 @@ body
 	@media only screen and (min-width: 992px) and (max-width: 1199px)
 		top: 7.9rem
 	@media only screen and (min-width: 768px) and (max-width: 991px)
-		top: 7rem
+		top: 6.8rem
 	@media only screen and (max-width: 767px)
 		top: 0
 		position: relative
