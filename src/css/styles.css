@@ -2,6 +2,14 @@
   font-family: Phenomena-Bold;
   src: url(../../fonts/Phenomena/Phenomena-Bold.otf), url(../../fonts/Phenomena/Phenomena-Bold.woff2), url(../../fonts/Phenomena/Phenomena-Bold.woff), url(../../fonts/Phenomena/Phenomena-Bold.ttf), url(../../fonts/Phenomena/Phenomena-Bold.eot); }
 
+@font-face {
+  font-family: Philosopher-Regular;
+  src: url(../../fonts/Philosopher/Philosopher-Regular.ttf), url(../../fonts/Philosopher/Philosopher-Regular.eot), url(../../fonts/Philosopher/Philosopher-Regular.woff2), url(../../fonts/Philosopher/Philosopher-Regular.woff); }
+
+@font-face {
+  font-family: Philosopher-Bold;
+  src: url(../../fonts/Philosopher/Philosopher-Bold.ttf), url(../../fonts/Philosopher/Philosopher-Bold.eot), url(../../fonts/Philosopher/Philosopher-Bold.woff2), url(../../fonts/Philosopher/Philosopher-Bold.woff); }
+
 @media only screen and (min-width: 1200px) {
   html {
     font-size: 18px; } }
@@ -17,11 +25,10 @@
 body {
   background-color: #fef9d9;
   color: #000;
-  font-family: 'Philosopher', sans-serif;
+  font-family: Philosopher-Regular;
   margin: 0 auto; }
 
 .nav {
-  display: inline-block;
   width: 100%;
   background-color: #fef9d9;
   padding-top: 12px;
@@ -30,8 +37,12 @@ body {
     .nav .row-adaptive {
       justify-content: space-between; } }
 
-.nav-active {
-  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2); }
+.fixed {
+  position: fixed;
+  z-index: 5;
+  top: -5px;
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2);
+  transition: 0.5s; }
 
 .logo {
   display: block;
@@ -52,8 +63,7 @@ body {
       text-decoration: none;
       letter-spacing: 1.35px;
       color: #000;
-      font-weight: 400;
-      webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+      font-weight: 400; }
       .top-nav_menu li a:hover {
         color: #8a1613;
         letter-spacing: 1.35px;
@@ -136,8 +146,7 @@ body {
       z-index: 10;
       top: -125px;
       right: -50%;
-      transform: translateX(50%);
-      webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+      transform: translateX(50%); }
     .nav_drop-down .drop-down li {
       margin-right: 0;
       margin-bottom: 10px; }
@@ -202,7 +211,6 @@ body {
 .main-title {
   font-family: Phenomena-Bold;
   text-transform: uppercase;
-  font-weight: 700;
   margin: 0; }
   @media only screen and (min-width: 1200px) {
     .main-title {
@@ -235,7 +243,6 @@ body {
   color: #935900;
   font-family: Phenomena-Bold;
   font-size: 36px;
-  font-weight: 700;
   letter-spacing: 2.7px;
   text-align: center;
   margin-bottom: 30px; }
@@ -246,7 +253,7 @@ body {
 button {
   background-color: #8a1613;
   letter-spacing: 1.35px;
-  font-weight: 700;
+  font-family: Philosopher-Bold;
   border: 2px solid #8a1613;
   color: #fff; }
   button:hover {
